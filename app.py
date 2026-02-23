@@ -48,9 +48,19 @@ st.plotly_chart(fig2, use_container_width=True)
 st.header("Phase C: Markov State Transitions & RL Training")
 c1, c2 = st.columns(2)
 with c1:
-    st.write("### Markov Modeling")
-    st.write("We treated each shift as a state transition. Once a player enters the 'Lethal State' (55s+), the probability of a turnover against the 1-3-1 trap increases by 68%.")
-    st.write("**Trap Tax:** We applied a 22% fatigue multiplier for Defensemen to account for lateral load.")
+    st.write("### The Training Environment")
+    st.write("The model uses a **Markov Decision Process (MDP)**. Players move through three states: Fresh, Warning, and Lethal.")
+    
+    # PASTE THIS NEW TABLE CODE HERE:
+    st.markdown("""
+    | Time Range | State | System Integrity | RL Reward |
+    | :--- | :--- | :--- | :--- |
+    | **0s - 40s** | 🟢 STABLE | 100% | +10 |
+    | **40s - 50s** | 🟡 WARNING | 78% (Trap Tax Applied) | +5 |
+    | **50s+** | 🔴 LETHAL | <40% (Geometric Collapse) | Exponential Decay |
+    """)
+    
+    st.write("**The 1-3-1 Trap Tax:** We applied a **22% fatigue multiplier** to Defensemen to account for the lateral load.")
 with c2:
     st.write("### RL Training Environment")
     st.write("The agent was trained on a 'Reward Function' that penalizes every second spent past the 48s cliff.")
