@@ -1,6 +1,6 @@
 # Penalty-Kill Decision-Support Framework
 
-**[Live Research Dashboard →](https://ncaa-pk-intelligence.streamlit.app)**
+**[Live Research Dashboard →](https://shu-hockey-intelligence.streamlit.app)**
 **[Published Preprint → SportRxiv](https://doi.org/10.51224/SportRxiv.972)**
 
 A reinforcement learning and Markov Chain framework for quantifying penalty-kill deployment risk in NCAA Division I ice hockey, published as a first-author preprint with a six-author cross-institutional research team.
