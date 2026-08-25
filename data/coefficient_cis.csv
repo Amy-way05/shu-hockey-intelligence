@@ -1,0 +1,6 @@
+coefficient,estimate,ci_lo,ci_hi,se,significant
+sb8_tied,0.0499,-0.4788,0.4871,0.2518,NO
+sb8_lead_1,-0.1587,-0.8578,0.4852,0.3344,NO
+sb8_lead_2+,-0.701,-1.3426,-0.1404,0.3052,YES
+pb8_late,0.6585,0.2126,1.1112,0.23,YES
+intercept,-1.7197,-2.1424,-1.3041,0.208,YES
